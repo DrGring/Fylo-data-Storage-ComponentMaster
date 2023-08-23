@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+//Variables
+$pale-blue:hsl(243, 100%, 93%);
+$grayish-blue:hsl(229, 7%, 55%);
+$darkblue-blue:hsl(228, 56%, 26%);
+$very-darkblue:hsl(229, 57%, 11%);
+$gradient-color:hsl(6, 100%, 80%), hsl(335, 100%, 65%);
+$font-size:14px;
+//mixins
+@mixin font-family-size {
+    font-family: 'Raleway', sans-serif;
+    font-size: $font-size;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}    
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+@mixin flex-items-center {
+    display: flex;
+    align-items: center;
+}
+body {
+    margin: 0;
+    height: 667px;
+    @include flex-center;
+    @include font-family-size();
+    background-image: url(/images/bg-mobile.png);
+    background-repeat: no-repeat;
+    @media screen and (min-width:377px) {
+        height: 800px;
+        background-color: $very-darkblue;
+        background-image: url(/images/bg-desktop.png);
+        background-position-y: bottom;
+    }
+}
+main {
+    width: 327px;
+    height: 417px;
+    color: $pale-blue;
+    @media screen and (min-width:1000px) {
+        width: 924px;
+        height: 205px;        
+    }
+}
+button {  
+    width: 180px;
+    height: 75px;
+    position: absolute;
+    border-radius: inherit;
+    border: transparent solid;
+    margin-top: 115px;
+    cursor: pointer;
+    transition: 2s;
+    @include font-family-size();
+    color: $grayish-blue;
+    background-color: white;
+    strong {
+        color: initial;
+        font-size: 35px;
+        color: $very-darkblue;
+    }
+  }
+.main_card-principal {
+    height: 202px;
+    background-color: $darkblue-blue;
+    border-radius: 10px;
+    border-top-right-radius: 101px;
+    text-align: initial;
+    @media screen and (min-width:1000px) {
+        width: 354px;        
+    }
+    &__logo {
+        width: 138px;
+        height: 40px;
+        margin-bottom: 30px;
+        margin-top: 39px;
+        margin-left: 30px;    
+    }
+    &__icons  {
+        @include flex-between();
+        width: 178px;
+        height: 49px;
+        margin-left: 30px;
+         a {
+            background-color: $very-darkblue;
+            display: grid;
+            place-items: center;
+            width: 49px;
+            height: 49px;
+            border-radius: 10px;
+        }
+    }    
+}
+.main_card-secondaire {
+    @include flex-items-center();
+    flex-direction: column;
+    background-color: $darkblue-blue;
+    width: 327px;
+    height: 159px;
+    margin-top:15px;
+    border-radius: 10px;
+    &__text {
+        margin-top: 30px;
+    }
+    &__progress-bar {
+        width: 262px;
+        height: 19px;
+        border-radius: 10.5px;
+        background-color: $very-darkblue;
+        @include flex-items-center();
+        &__gradient-bar {
+            width: 193px;
+            height: 14px;
+            margin-left: 4px;
+            border-radius: 10.5px;
+            background: linear-gradient(45deg, $gradient-color);
+            .gradient-bar__circle {
+                width: 10px;
+                height: 10px;
+                float: right;
+                margin: 2px;
+                border-radius: 50px;
+                background-color: white;
+                cursor:pointer;
+            }
+        }
+    }
+    &__box-gb {
+        @include flex-between();
+        width: 262px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+}

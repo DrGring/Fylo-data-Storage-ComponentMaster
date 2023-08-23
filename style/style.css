@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+body {
+  margin: 0;
+  height: 667px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  background-image: url(/images/bg-mobile.png);
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 377px) {
+  body {
+    height: 800px;
+    background-color: hsl(229, 57%, 11%);
+    background-image: url(/images/bg-desktop.png);
+    background-position-y: bottom;
+  }
+}
+
+main {
+  width: 327px;
+  height: 417px;
+  color: hsl(243, 100%, 93%);
+}
+@media screen and (min-width: 1000px) {
+  main {
+    width: 924px;
+    height: 205px;
+  }
+}
+
+button {
+  width: 180px;
+  height: 75px;
+  position: absolute;
+  border-radius: inherit;
+  border: transparent solid;
+  margin-top: 115px;
+  cursor: pointer;
+  transition: 2s;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: hsl(229, 7%, 55%);
+  background-color: white;
+}
+button strong {
+  color: initial;
+  font-size: 35px;
+  color: hsl(229, 57%, 11%);
+}
+
+.main_card-principal {
+  height: 202px;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 10px;
+  border-top-right-radius: 101px;
+  text-align: initial;
+}
+@media screen and (min-width: 1000px) {
+  .main_card-principal {
+    width: 354px;
+  }
+}
+.main_card-principal__logo {
+  width: 138px;
+  height: 40px;
+  margin-bottom: 30px;
+  margin-top: 39px;
+  margin-left: 30px;
+}
+.main_card-principal__icons {
+  display: flex;
+  justify-content: space-between;
+  width: 178px;
+  height: 49px;
+  margin-left: 30px;
+}
+.main_card-principal__icons a {
+  background-color: hsl(229, 57%, 11%);
+  display: grid;
+  place-items: center;
+  width: 49px;
+  height: 49px;
+  border-radius: 10px;
+}
+
+.main_card-secondaire {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(228, 56%, 26%);
+  width: 327px;
+  height: 159px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+.main_card-secondaire__text {
+  margin-top: 30px;
+}
+.main_card-secondaire__progress-bar {
+  width: 262px;
+  height: 19px;
+  border-radius: 10.5px;
+  background-color: hsl(229, 57%, 11%);
+  display: flex;
+  align-items: center;
+}
+.main_card-secondaire__progress-bar__gradient-bar {
+  width: 193px;
+  height: 14px;
+  margin-left: 4px;
+  border-radius: 10.5px;
+  background: linear-gradient(45deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+.main_card-secondaire__progress-bar__gradient-bar .gradient-bar__circle {
+  width: 10px;
+  height: 10px;
+  float: right;
+  margin: 2px;
+  border-radius: 50px;
+  background-color: white;
+  cursor: pointer;
+}
+.main_card-secondaire__box-gb {
+  display: flex;
+  justify-content: space-between;
+  width: 262px;
+  margin-top: 10px;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
